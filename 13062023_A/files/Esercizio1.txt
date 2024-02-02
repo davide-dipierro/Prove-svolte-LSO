@@ -1,0 +1,11 @@
+A. Utilizzando awk si scriva un comando che stampi solo le linee di un file "parole.txt" che iniziano con la parola "LSO".
+awk '{if( $0 ~ /^LSO/) print $0}' parole.txt
+awk '/^LSO/ {print}' parole.txt
+B. Usando grep si stampino tutte le linee che terminano con "700".
+grep "700$" parole.txt
+C. Dato un file contenente i compleanni di un gruppo di amici, usando sed restituire le linee degli amici aventi il compleanno tra novembre e dicembre.
+sed -n '/..-\(11\|12\)-..../p' compleanni.txt
+D. Data una file contente nomi, cognome e data di nascita, usando awk restituire tutti i cognomi che iniziano con R.
+awk '{if ($2 ~ /^R/) print}' nomicognomi.txt
+awk '$2 ~ /^R/' nomicognomi.txt
+

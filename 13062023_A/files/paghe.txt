@@ -1,0 +1,6 @@
+Mario,Rossi,M,30000,2020
+Anna,Bianchi,F,35000,2018
+Luigi,Verdi,M,28000,2019
+Elena,Gialli,F,40000,2017
+Giovanni,Neri,M,32000,2021
+Sara,Rosa,F,38000,2016
