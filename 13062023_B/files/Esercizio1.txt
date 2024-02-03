@@ -1,0 +1,8 @@
+A. Dato un file avente contenuti "nome cognome" restituire a video o in un altro file, i nomi e cognomi in maniera inversa e separati da virgola. Es. "alessandra rossi" -> "rossi, alessandra"
+awk '{ print $2", "$1 }' nomicognomiesercizio1.txt
+B. Usando awk stampare tutti i numeri di telefono presenti in un file avente struttura: nome, cognome, numero di telefono, indirizzo
+awk -F , '{ print $3 }' nomicognomiesercizio1.txt
+C. Usando awk, dato un nome prestabilito, restituire il numero di telefono della persona indicata. Si usi lo stesso file usato al punto precedente.
+read -p "Inserisci il nome: "; $nome; awk -F , '{ if( $1 == "'$nome'") print "Il suo numero è: " $3 }' nomicognomiesercizio1.txt
+D. Data una file contente nomi, cognome e data di nascita, usando awk restituire tutti i cognomi che iniziano con R e termina con E.
+awk '$2 ~ /^R.*e,/' nomicognomiesercizio1.txt

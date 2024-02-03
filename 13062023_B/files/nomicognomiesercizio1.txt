@@ -1,0 +1,6 @@
+Chiara, Bianchi, 3440000001, via napoli 1
+Giulio, Verdi, 3440000002, via roma 2
+Paolo, Rossi, 3440000003, via firenze 3
+Ciro, Esposito, 3440000004, via garibaldi 4
+Emilia, Rosse, 3440000005, via palermi 5
+Claudio, Rossella, 3440000005, via palermi 5
