@@ -1,0 +1,10 @@
+Esercizio 1
+A. Utilizzando awk si scriva un comando che stampi una lista dei file presenti nella directory corrente mostrando solo dimensione e nome.
+ls -l | awk '{print $5, $9}'
+B. Si calcoli la dimensione occupata in totale dai file regolari con dimensione maggiore di 1024 byte nella directory corrente
+ls -l | awk 'BEGIN {sum=0} { if ($5 > 1024 && substr($1,1,1) == "-") sum+=$5} END {print "sum="sum}'
+ls -l | awk 'BEGIN { sum=0 } { if ($5 > 1024 && $1 ~ /^-/) sum+=$5} END {print "sum="sum}'
+C. Si faccia in modo che il comando stampi solo i file maggiori di 1024 byte
+ls -l | awk '{ if ($5 > 1024) print $0 }'
+D. Trovare i file non acceduti negli ultimi 30 giorni
+ls -l --time-style=+%s | awk 'BEGIN { now=systime() } { if(now-$6 < 60*60*24*30) print $0 }'
