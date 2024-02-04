@@ -1,0 +1,7 @@
+adm:x:4:syslog,adm1
+admins:x:1006:adm2,adm12,manuel
+ssl-cert:x:122:postgres
+alan2:x:1009:aceto,salvemini
+conda:x:1011:giovannelli,galise,aceto,caputo,haymele,salvemini,scala,adm2,adm12
+adm1Group:x:1022:adm2,adm1,adm3
+docker:x:998:manuel

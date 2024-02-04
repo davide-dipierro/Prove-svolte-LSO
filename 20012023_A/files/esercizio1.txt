@@ -1,0 +1,4 @@
+A. awk -F : '{ print $4 }' sup_groups.txt
+B. awk -F : '{ if($1=="admins" || $1=="adm") print $4 }' sup_groups.txt | awk -F , '{ SOMMA+=NF } END { print SOMMA }'
+C. awk -F , '{ if(NF>2) print }' sup_groups.txt | awk -F : '{ print $3 }'
+D. awk -F , 'BEGIN{ MAX_USER=0; ID_GROUP=0 } { if(NF>MAX_USER) { MAX_USER=NF; ID_GROUP=$1 } print ID_GROUP } END { print ID_GROUP}' sup_groups.txt  | awk -F : 'END { print $3 }'
