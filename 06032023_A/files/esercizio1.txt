@@ -1,0 +1,5 @@
+A. ls -l | awk '{print $9" "$3}'
+B. ls -l | awk '{ if($1 ~ /^-/ && $5<1024) somma=somma+$5 } END {print somma}'
+C. awk --field-separator= '{if(NF>10) print $0}' parole.txt
+D.  export LIST="perm,link,user,group,date"
+ls -l | awk -v list="$LIST" '{split(list, fields, ","); print $fields[1], $fields[2], $fields[3], $fields[4], $fields[5]}'
