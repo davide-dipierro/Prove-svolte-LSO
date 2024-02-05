@@ -1,0 +1,5 @@
+A. awk -F'-' '{print $2", "$1}' nomicognomies1.txt |  sed -E 's/, ([^ ])([^ ])*/, \1./'
+B. sed -i 's/LSO/LSO-2023/g' esami_sostenuti.txt
+C. awk 'BEGIN{somma=0} { if($0 ~ /LSO/) somma++ } END{print NR-somma}' esami_sostenuti.txt
+D. size=$(ls -l | awk 'BEGIN{somma=0} {if($1 ~ /^-/) somma+=$5} END{print somma}')
+ls -l | awk -v size=$size '{if($5<size) print $9}'
